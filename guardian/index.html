@@ -52,15 +52,15 @@
   </form>
 </div>
 <div id="invalid" hidden>
-  <p class="note">This link looks incomplete. Please use the link exactly as it arrived in the text or email. If it still doesn't work, email <a href="mailto:groundwork.app.help@gmail.com">groundwork.app.help@gmail.com</a>.</p>
+  <p class="note">This link looks incomplete. Please use the link exactly as it arrived in the email. If it still doesn't work, email <a href="mailto:groundwork.app.help@gmail.com">groundwork.app.help@gmail.com</a>.</p>
 </div>
 <noscript><p class="note">This page needs JavaScript to open the app. Email <a href="mailto:groundwork.app.help@gmail.com">groundwork.app.help@gmail.com</a> for help.</p></noscript>
 
-<p>See our <a href="../privacy.html">Privacy Policy</a> and <a href="../terms.html">Terms &amp; Conditions</a>. Reply STOP to the text message to stop receiving texts.</p>
+<p>See our <a href="../privacy.html">Privacy Policy</a> and <a href="../terms.html">Terms &amp; Conditions</a>.</p>
 
 <script>
-  // The token stays in this browser. It is only placed into the link that opens the app, and is
-  // never sent to any server from this page. The app presents it to the database, which checks it.
+  // The token is placed into the link that opens the app. It is sent to our server only if the guardian
+  // chooses text updates (below), where it proves which invitation the number belongs to.
   (function () {
     var token = new URLSearchParams(window.location.search).get('token') || '';
     if (/^[0-9a-f-]{32,100}$/i.test(token)) {
