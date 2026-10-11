@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="../style.css">
+<title>Guardian Text Opt-in Example</title>
+<style>
+  .note { border: 1px solid currentColor; padding: 12px 16px; border-radius: 12px; }
+  label.consent { display: flex; gap: 10px; align-items: flex-start; }
+  label.consent input { margin-top: 5px; }
+  input[type=tel] { font: inherit; padding: 10px 12px; border-radius: 10px; border: 1px solid currentColor; width: 100%; max-width: 280px; box-sizing: border-box; }
+  button { font: inherit; font-weight: 600; padding: 10px 18px; border-radius: 12px; border: 1px solid currentColor; }
+  button[disabled] { opacity: .5; }
+  .fine { font-size: .85rem; }
+</style>
+</head>
+<body>
+<nav><a href="../index.html">Groundwork</a><a href="../privacy.html">Privacy Policy</a><a href="../terms.html">Terms &amp; Conditions</a><a href="../sms.html">SMS consent</a></nav>
+
+<h1>Example: the text opt-in a guardian sees</h1>
+<p class="note">This is a read-only copy of the opt-in section of the page a parent or guardian opens from their personal email link (<code>/guardian/?token=…</code>). It is shown here so the opt-in can be reviewed without a personal link. The form on this page is not active and sends nothing. On the real page the box starts <strong>unticked</strong>, and the button stays off until the guardian ticks it.</p>
+
+<h2>Text message updates (optional)</h2>
+<p>You can approve by email without any texts. If you would also like text updates about this account, add your own mobile number below.</p>
+<form onsubmit="return false">
+  <label class="consent"><input type="checkbox" id="sms-consent" disabled><span>Yes, text me about this account. I agree to receive text messages from Groundwork by Danny Chong at the number below: a confirmation, reminders to approve, and account notices.</span></label>
+  <p><label for="sms-phone">Your mobile number (US)</label><br><input type="tel" id="sms-phone" placeholder="703 555 0123" disabled></p>
+  <p><button type="submit" disabled>Turn on text updates</button></p>
+  <p class="fine">Agreeing to texts is not required to approve the account. Message frequency varies. Message and data rates may apply. Reply STOP to cancel at any time, HELP for help. See the <a href="../terms.html">Terms &amp; Conditions</a> and <a href="../privacy.html">Privacy Policy</a>. We do not sell or share your phone number or SMS opt-in data with third parties for marketing purposes.</p>
+</form>
+
+<h2>The confirmation text that follows</h2>
+<p><em>Groundwork by Danny Chong: You're signed up for text updates about [the young person's name]'s Groundwork account. We'll text you only about this account. Message and data rates may apply. Reply STOP to opt out, HELP for help.</em></p>
+
+<p>Back to <a href="../sms.html">how Groundwork uses text messages</a>.</p>
+</body>
+</html>
